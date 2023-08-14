@@ -1,0 +1,23 @@
+{
+  "name": "ea-pwa",
+  "version": "1.0.0",
+  "description": "Essa é uma pwa que tera funçoes de calcular IMC e um controlador de placar de truco",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amorim-EA/ATV_PWA_IMC"
+  },
+  "author": "Gemeos EA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amorim-EA/ATV_PWA_IMC/issues"
+  },
+  "homepage": "https://github.com/Amorim-EA/ATV_PWA_IMC#readme",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}

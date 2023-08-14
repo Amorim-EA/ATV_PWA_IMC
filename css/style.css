@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+html, .fullscreen {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+li {
+   list-style: none;
+   border: 1px inset white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: auto;
+}
+
+.title {
+    font-size: 3rem;
+}
