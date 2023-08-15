@@ -13,28 +13,40 @@
  
     <header>
         <h1 id="titulo">Peso Ideal</h1>
-        <h4 id="subtitulo">calculadora de imc</h4>
     </header>
     <section class="container">
+      <div class="input-label">
         <label>Nome:</label>
         <input type="text" id="nomeCLI" placeholder="Digite o nome" class="input-padrao"/>
+      </div>
+      <div class="input-label">
         <label>Idade:</label>
         <input type="number" id="idadeCLI" placeholder="Digite a idade" class="input-padrao"/>
+      </div>
+      <div class="input-label">
         <label>Sexo:</label>
         <input type="text" id="sexoCLI" placeholder="Digite o sexo" class="input-padrao"/>
+      </div>
+      <div class="input-label">
+        <label>Altura:</label>
+        <input type="number" id="alturaCLI" placeholder="Digite a altura" class="input-padrao"/>
+      </div>
+      <div class="input-label">
         <label>Peso:</label>
         <input type="number" id="pesoCLI" placeholder="Digite o peso" class="input-padrao"/>
+      </div>
+
 
         <div class="botoes">
-            <input type="submit" value="Enviar" class="botao"> 
-            <input type="reset" value="Limpar" class="botao"> 
+            <input type="submit" value="Enviar" class="botao" id="click"> 
+            <input type="reset" value="Limpar" class="botao" id="limpar"> 
         </div>
     </section>
+    <section class="render">
+      
+    </section>
     
-    <div class="render">
-
-    </div>
-
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

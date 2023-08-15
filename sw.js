@@ -1,5 +1,5 @@
 let cacheName="Peso Ideal - IMC";
-let filesToCache = ["/", "/index.html","/css/style.css", "/js/main.js"];
+let filesToCache = ["/", "/index.html","/css/style.css", "/js/main.js", "/information.html", "/js/script.js"];
 
 self.addEventListener("install", (e) => { 
     e.waitUntil(
