@@ -2,32 +2,9 @@ let nome, idade, sexo, altura, peso, resultado, imc, estilo;
 let clicou = document.getElementById("click");
 let limpar = document.getElementById("limpar");
 
-clicou.addEventListener('click', () => {
-  let urlDestino = "http://localhost:3000/information.html";
-  window.location.href = urlDestino;
-});
-
-limpar.addEventListener('click', () => {
-  location.reload();
-});
-
-function render() {
-  // inputs
-  nome = document.getElementById("nomeCLI").value;
-  idade = Number(document.getElementById("idadeCLI").value);
-  sexo = document.getElementById("sexoCLI").value;
-  altura = parseFloat(document.getElementById("alturaCLI").value);
-  peso = parseFloat(document.getElementById("pesoCLI").value);
-
-  // outputs
-  let elemNome = document.getElementById("nome");
-  let elemIdade = document.getElementById("idade");
-  let elemSexo = document.getElementById("sexo");
-  let elemAltura = document.getElementById("altura");
-  let elemPeso = document.getElementById("peso");
-  let elemResultado = document.getElementById("resultado");
-
+function calculateIMC() {
   imc = (peso / (altura * altura)).toFixed(1);
+
   if (imc > 18.5 && imc < 24.9) {
     resultado = "Peso normal";
     estilo = "blue";
@@ -49,15 +26,40 @@ function render() {
     estilo = "green";
     imc < 16 && (estilo = "yellow");
   }
-  elemResultado.style.color = estilo;
-
-  elemNome.innerHTML = nome;
-  elemIdade.innerHTML = idade;
-  elemSexo.innerHTML = sexo;
-  elemAltura.innerHTML = altura;
-  elemPeso.innerHTML = peso;
-  elemResultado.innerHTML = resultado;
 }
 
-// Chama a função de renderização ao carregar a página
-document.addEventListener('DOMContentLoaded', render());
+function updateUI() {
+  let elemNome = document.getElementById("nome");
+  let elemIdade = document.getElementById("idade");
+  let elemSexo = document.getElementById("sexo");
+  let elemAltura = document.getElementById("altura");
+  let elemPeso = document.getElementById("peso");
+  let elemResultado = document.getElementById("resultado");
+
+  elemResultado.style.color = estilo;
+
+  elemNome.textContent = nome;
+  elemIdade.textContent = idade;
+  elemSexo.textContent = sexo;
+  elemAltura.textContent = altura;
+  elemPeso.textContent = peso;
+  elemResultado.textContent = resultado;
+}
+
+clicou.addEventListener('click', () => {
+  nome = document.getElementById("nomeCLI").value;
+  idade = Number(document.getElementById("idadeCLI").value);
+  sexo = document.getElementById("elem-select").value;
+  altura = parseFloat(document.getElementById("alturaCLI").value);
+  peso = parseFloat(document.getElementById("pesoCLI").value);
+
+  calculateIMC();
+  updateUI();
+  
+  console.log(nome, idade, peso, altura, resultado, imc, estilo,sexo);
+});
+
+limpar.addEventListener('click', () => {
+  let urlDestino = "http://localhost:3000/index.html";
+  window.location.href = urlDestino;
+});
