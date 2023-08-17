@@ -60,6 +60,6 @@ clicou.addEventListener('click', () => {
 });
 
 limpar.addEventListener('click', () => {
-  let urlDestino = "http://localhost:3000/index.html";
+  let urlDestino = "https://peso-ideal-imc-pwa.netlify.app/";
   window.location.href = urlDestino;
 });
