@@ -96,3 +96,7 @@ table th {
   color: white;
   font-size: 2em;
 }
+
+#resultado {
+  background-color: white;
+}
