@@ -42,7 +42,7 @@ function atualizarDados() {
   elemIdade.textContent = `${idade} anos`;
   elemSexo.textContent = sexo;
   elemAltura.textContent = `${altura}m`;
-  elemPeso.textContent = peso;
+  elemPeso.textContent = `${peso}kg`;
   elemResultado.textContent = resultado;
 }
 
@@ -53,6 +53,9 @@ clicou.addEventListener('click', () => {
   altura = parseFloat(document.getElementById("alturaCLI").value);
   peso = parseFloat(document.getElementById("pesoCLI").value);
 
+if(altura > 2.2){
+  altura = (altura/100);
+}
   calculateIMC();
   atualizarDados();
   
