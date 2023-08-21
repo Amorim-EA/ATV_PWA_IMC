@@ -28,7 +28,7 @@ function calculateIMC() {
   }
 }
 
-function updateUI() {
+function atualizarDados() {
   let elemNome = document.getElementById("nome");
   let elemIdade = document.getElementById("idade");
   let elemSexo = document.getElementById("sexo");
@@ -39,9 +39,9 @@ function updateUI() {
   elemResultado.style.color = estilo;
 
   elemNome.textContent = nome;
-  elemIdade.textContent = idade;
+  elemIdade.textContent = `${idade} anos`;
   elemSexo.textContent = sexo;
-  elemAltura.textContent = altura;
+  elemAltura.textContent = `${altura}m`;
   elemPeso.textContent = peso;
   elemResultado.textContent = resultado;
 }
@@ -54,9 +54,8 @@ clicou.addEventListener('click', () => {
   peso = parseFloat(document.getElementById("pesoCLI").value);
 
   calculateIMC();
-  updateUI();
+  atualizarDados();
   
-  console.log(nome, idade, peso, altura, resultado, imc, estilo,sexo);
 });
 
 limpar.addEventListener('click', () => {
