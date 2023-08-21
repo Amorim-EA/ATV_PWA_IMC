@@ -3,20 +3,20 @@
     "short_name": "Peso Ideal - IMC", 
     "icons": [
         {
-            "src": "images/images.jpg",
+            "src": "https://peso-ideal-imc-pwa.netlify.app/images/images.jpg",
             "sizes": "256x256", 
             "type":"image/jpg",
             "purpose": "any maskable"
         },
         {
-            "src": "images/images.png",
+            "src": "https://peso-ideal-imc-pwa.netlify.app/images/images.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }
     ],     
     "lang": "pt-BR",
-    "start_url": "/index.html",
+    "start_url": "https://peso-ideal-imc-pwa.netlify.app/index.html",
     "display": "standalone",
     "background_color": "white", "theme_color": "white"
 }
