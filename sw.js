@@ -1,5 +1,5 @@
 let cacheName="Peso Ideal - IMC";
-let filesToCache = ["https://peso-ideal-imc-pwa.netlify.app/", "https://peso-ideal-imc-pwa.netlify.app/index.html","/css/style.css", "https://peso-ideal-imc-pwa.netlify.app/js/main.js", "https://peso-ideal-imc-pwa.netlify.app/js/script.js"];
+let filesToCache = ["/", "/index.html","/css/style.css", "/js/main.js", "/js/script.js"];
 
 self.addEventListener("install", (e) => { 
     e.waitUntil(
