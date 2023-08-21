@@ -2,7 +2,7 @@ let nome, idade, sexo, altura, peso, resultado, imc, estilo;
 let clicou = document.getElementById("click");
 let limpar = document.getElementById("limpar");
 
-function calculateIMC() {
+function calcularIMC() {
   imc = (peso / (altura * altura)).toFixed(1);
 
   if (imc > 18.5 && imc < 24.9) {
@@ -56,7 +56,7 @@ clicou.addEventListener('click', () => {
 if(altura > 2.2){
   altura = (altura/100);
 }
-  calculateIMC();
+  calcularIMC();
   atualizarDados();
   
 });
